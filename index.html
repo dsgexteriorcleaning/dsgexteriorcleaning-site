@@ -59,35 +59,50 @@
     }
     .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
     .brand{
-      display:flex; align-items:center; gap:12px;
-      font-weight:650;
-      letter-spacing:-.2px;
-    }
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:650;
+  letter-spacing:-.2px;
+  white-space:nowrap;   /* 🔒 keep on one line */
+  min-width:0;
+  max-width:420px;
+}
     .logo{
   width:150px;
   height:150px;
   object-fit:contain;
   display:block;
+  flex-shrink:0;
 }
     .brand small{
-      display:block;
-      font-weight:500;
-      color:var(--muted);
-      letter-spacing:-.1px;
-      margin-top:1px;
-      font-size:12px;
-    }
+  display:inline;                 /* 👈 inline, not block */
+  font-weight:500;
+  color:#6b7280;
+  margin-left:6px;
+  font-size:12px;
+  white-space:nowrap; 
+  opacity:.75;/* 🔒 no wrapping */
+}
+    @media(max-width:900px){
+  .links{display:none}
+}
     .links{
-      display:flex; align-items:center; gap:14px;
-      font-size:13px;
-      color:rgba(17,24,39,.72);
-      font-weight:550;
-    }
-    .links a{
-      padding:8px 10px;
-      border-radius:12px;
-      transition:.15s ease;
-    }
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+  color:rgba(17,24,39,.72);
+  font-weight:600;
+  white-space:nowrap;   /* 🔒 prevents wrapping */
+  flex-shrink:0;        /* 🔒 prevents squeezing */
+}
+.links a{
+  padding:8px 10px;
+  border-radius:12px;
+  transition:.15s ease;
+  white-space:nowrap;   /* 🔒 link text never wraps */
+}
     .links a:hover{
       background:rgba(17,24,39,.045);
       color:rgba(17,24,39,.92);
