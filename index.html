@@ -122,118 +122,125 @@
     .btn.link:hover{background:rgba(17,24,39,.045); box-shadow:none}
 
     /* Hero */
-    .hero{
-      position:relative;
-      overflow:hidden;
-      border-bottom:1px solid var(--border);
-      background:
-        radial-gradient(900px 520px at 15% 15%, rgba(176,141,87,.16), transparent 58%),
-        radial-gradient(900px 520px at 85% 15%, rgba(11,42,74,.12), transparent 58%),
-        linear-gradient(180deg, #ffffff 0%, #fbfbfc 65%, #ffffff 100%);
-    }
-    .hero-inner{
-      padding:84px 0 70px;
-      display:grid;
-      grid-template-columns: 1.18fr .82fr;
-      gap:30px;
-      align-items:start;
-    }
-    h1{
-      margin:0 0 10px;
-      font-size:54px;
-      line-height:1.05;
-      letter-spacing:-1.2px;
-      font-weight:700;
-    }
-    .subtitle{
-      margin:0 0 20px;
-      color:rgba(17,24,39,.78);
-      font-size:20px;
-      letter-spacing:-.2px;
-      max-width:62ch;
-    }
-    .meta{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin:22px 0 26px;
-    }
-    .chip{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.70);
-      color:rgba(17,24,39,.72);
-      font-size:12px;
-      font-weight:650;
-      letter-spacing:-.1px;
-    }
-    .dot{
-      width:8px;height:8px;border-radius:99px;
-      background:rgba(17,24,39,.22);
-    }
-    .actions{display:flex; gap:12px; flex-wrap:wrap}
-    .note{
-      margin-top:16px;
-      color:var(--muted);
-      font-size:12px;
-    }
     .hero-bg{
   position:relative;
-  min-height:520px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   padding:72px 0;
-  background:
-    url('/assets/img/hero-home.png') center/cover no-repeat;
-    }
+  background:url('/assets/img/hero-home.webp') center/cover no-repeat;
+}
+.hero-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(255,255,255,.90) 0%,
+    rgba(255,255,255,.74) 35%,
+    rgba(255,255,255,.60) 60%,
+    rgba(255,255,255,.88) 100%
+  );
+}
+.hero-shell{position:relative; z-index:1;}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:14px;
+  align-items:start;
+}
+.hero-left h1{
+  margin:0 0 12px;
+  font-size:52px;
+  line-height:1.05;
+  letter-spacing:-1px;
+}
+.hero-left p{
+  margin:0;
+  font-size:16.5px;
+  color:rgba(17,24,39,.75);
+  max-width:72ch;
+}
+.hero-actions{
+  margin-top:18px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.meta{
+  margin-top:16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 10px;
+  border:1px solid rgba(17,24,39,.10);
+  border-radius:999px;
+  background:rgba(17,24,39,.03);
+  font-size:12px;
+  font-weight:650;
+  color:rgba(17,24,39,.72);
+}
+.dot{width:8px;height:8px;border-radius:999px;background:rgba(17,24,39,.18)}
+.note{
+  margin-top:14px;
+  color:rgba(17,24,39,.58);
+  font-size:12px;
+  max-width:78ch;
+}
 
-    .hero-overlay{
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(255,255,255,.88) 0%,
-          rgba(255,255,255,.70) 35%,
-          rgba(255,255,255,.55) 60%,
-          rgba(255,255,255,.85) 100%
-        );
-    }
-    
-    .hero-content{
-      position:relative;
-      z-index:1;
-      max-width:820px;
-      margin:0 auto;
-      text-align:center;
-    }
-    
-    .hero-content h1{
-      font-size:52px;
-      line-height:1.05;
-      letter-spacing:-1px;
-      margin:0 0 12px;
-    }
-    
-    .hero-content p{
-      font-size:17px;
-      color:rgba(17,24,39,.75);
-      max-width:70ch;
-      margin:0 auto;
-    }
-    .hero-actions{
-      margin-top:18px;
-      display:flex;
-      gap:10px;
-      justify-content:center;          /* centers buttons */
-      flex-wrap:wrap;
-    }
-    
-    @media(max-width:900px){
-      .hero-bg{min-height:420px;padding:56px 0}
-      .hero-content h1{font-size:42px}
-    }
+.card{
+  border:1px solid rgba(17,24,39,.10);
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 18px 50px rgba(17,24,39,.10);
+  overflow:hidden;
+}
+.card-head{
+  padding:14px 16px;
+  font-weight:800;
+  letter-spacing:-.2px;
+  border-bottom:1px solid rgba(17,24,39,.10);
+  background:rgba(17,24,39,.02);
+}
+.card-body{padding:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid1{display:grid;grid-template-columns:1fr;gap:10px}
+label{
+  display:block;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(17,24,39,.55);
+  margin:0 0 7px;
+}
+input, select, textarea{
+  width:100%;
+  padding:12px 12px;
+  border-radius:14px;
+  border:1px solid rgba(17,24,39,.10);
+  font-family:inherit;
+  font-size:14px;
+  outline:none;
+}
+.form-actions{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.helper{
+  margin-top:10px;
+  color:rgba(17,24,39,.58);
+  font-size:12px;
+}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-left h1{font-size:42px}
+  .grid2{grid-template-columns:1fr}
+}
+
 
     /* Apple-like floating card */
     .card{
@@ -461,32 +468,42 @@
   </div>
 
   <header class="hero-bg">
-    <div class="hero-overlay"></div>
-    
-    <div class="wrap hero-content">
-          <h1>Professional care.<br/>Exceptional finish.</h1>
-          <p>
-            DSG Exterior Cleaning provides soft washing, pressure washing, window cleaning, and gutter services
-            across Dutchess, Putnam, and Upper Westchester — with care-first methods designed to protect your home.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="/quote.html">Request a Quote</a>
-            <a class="btn" href="/services.html">View Services</a>
-          </div>
-    </div>
-          <div class="meta">
-            <span class="chip"><span class="dot"></span>Insured</span>
-            <span class="chip"><span class="dot"></span>Safety-first procedures</span>
-            <span class="chip"><span class="dot"></span>Care-driven service</span>
-            <span class="chip"><span class="dot"></span>Clear, professional scheduling</span>
-          </div>
+  <div class="hero-overlay"></div>
 
-          <div class="note">Demo page design. Replace phone/email and connect forms to QuoteIQ or your preferred CRM.</div>
+  <div class="wrap hero-shell">
+    <div class="hero-grid">
+
+      <!-- LEFT: Hero copy -->
+      <div class="hero-left">
+        <h1>Professional care.<br/>Exceptional finish.</h1>
+        <p>
+          DSG Exterior Cleaning provides soft washing, pressure washing, window cleaning, and gutter services
+          across Dutchess, Putnam, and Upper Westchester — with care-first methods designed to protect your home.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="/quote.html">Request a Quote</a>
+          <a class="btn" href="/services.html">View Services</a>
         </div>
 
-        <div class="card" id="quote">
+        <div class="meta">
+          <span class="chip"><span class="dot"></span>Insured</span>
+          <span class="chip"><span class="dot"></span>Safety-first procedures</span>
+          <span class="chip"><span class="dot"></span>Care-driven service</span>
+          <span class="chip"><span class="dot"></span>Clear, professional scheduling</span>
+        </div>
+
+        <div class="note">
+          Demo page design. Replace phone/email and connect forms to QuoteIQ or your preferred CRM.
+        </div>
+      </div>
+
+      <!-- RIGHT: Quote card (preview only) -->
+      <div class="hero-right">
+        <div class="card">
           <div class="card-head">Request a Quote</div>
           <div class="card-body">
+
             <div class="grid2">
               <div>
                 <label>Full name</label>
@@ -533,19 +550,21 @@
                 <textarea rows="3" placeholder="Siding type, roof type, staining, access, etc."></textarea>
               </div>
             </div>
-          </div>
 
-            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <div class="form-actions">
               <button class="btn primary" type="button" onclick="alert('Demo only: connect to QuoteIQ, a form tool, or email.')">Submit</button>
-              <a class="btn" href="#veterans">Veterans Program</a>
+              <a class="btn" href="/veterans.html">Veterans Program</a>
             </div>
 
             <div class="helper">Demo form. In production, this would route to your CRM and trigger follow-ups.</div>
+
           </div>
         </div>
       </div>
+
     </div>
-  </header>
+  </div>
+</header>
 
   <section class="band">
     <div class="wrap">
