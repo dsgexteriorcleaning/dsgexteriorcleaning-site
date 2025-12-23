@@ -30,9 +30,27 @@
     h1{margin:0 0 10px;font-size:46px;letter-spacing:-1px;font-weight:700}
     p{margin:0;color:rgba(17,24,39,.72);max-width:90ch}
     .list{padding:56px 0}
-    .post{border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin:12px 0;background:#fff}
-    .post b{display:block;margin-bottom:6px}
-    .post small{color:rgba(17,24,39,.58)}
+    .post{
+      display:block;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin:12px 0;
+      background:#fff;
+}
+      .post b{
+        display:block;
+        margin:0 0 6px 0;
+        line-height:1.25;
+}
+      .post small{
+        display:block;
+        margin-top:2px;
+        color:rgba(17,24,39,.58);
+        line-height:1.25;
+}
+
     footer{padding:44px 0;background:#fbfbfc;border-top:1px solid var(--border);color:rgba(17,24,39,.72)}
     @media(max-width:900px){.links{display:none} h1{font-size:40px}}
   </style>
