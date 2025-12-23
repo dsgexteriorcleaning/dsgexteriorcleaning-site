@@ -50,7 +50,7 @@
       position:sticky; top:0; z-index:50;
       background:rgba(255,255,255,.78);
       backdrop-filter:saturate(180%) blur(18px);
-      border-bottom:1px solid var(--border);
+      border-bottom:1px solid rgba(17,24,39,.10);
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
@@ -62,22 +62,12 @@
       font-weight:650;
       letter-spacing:-.2px;
     }
-    .mark{
-      width:28px;height:28px;border-radius:10px;
-      background:linear-gradient(135deg, rgba(11,42,74,.92), rgba(11,42,74,.78));
-      box-shadow:0 10px 24px rgba(11,42,74,.20);
-      position:relative;
-      flex:0 0 auto;
-    }
-    .mark:after{
-      content:"DSG";
-      position:absolute; inset:0;
-      display:grid; place-items:center;
-      color:white;
-      font-size:10px;
-      font-weight:800;
-      letter-spacing:.9px;
-    }
+    .logo{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+  display:block;
+}
     .brand small{
       display:block;
       font-weight:500;
