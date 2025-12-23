@@ -59,69 +59,35 @@
     }
     .wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
     .brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:650;
-  letter-spacing:-.2px;
-  min-width:0;
-  flex:0 1 auto;              /* allow brand to shrink if needed */
-}
-
-.brandtext{
-  display:flex;
-  flex-direction:column;       /* two lines */
-  line-height:1.1;
-  min-width:0;
-}
-
-.brandname{
-  font-size:14px;
-  font-weight:700;
-  letter-spacing:-.2px;
-  white-space:nowrap;          /* line 1 stays one line */
-  overflow:hidden;
-  text-overflow:ellipsis;      /* if extremely tight, it truncates cleanly */
-  max-width:320px;             /* prevents brand from stealing header space */
-}
-
-.tagline{
-  font-size:12px;
-  font-weight:500;
-  color:#6b7280;
-  white-space:nowrap;          /* line 2 stays one line */
-  overflow:hidden;
-  text-overflow:ellipsis;
-  max-width:320px;
-}
-
-.logo{
-  width:32px;
-  height:32px;
+      display:flex; align-items:center; gap:12px;
+      font-weight:650;
+      letter-spacing:-.2px;
+    }
+    .logo{
+  width:100px;
+  height:100px;
   object-fit:contain;
   display:block;
-  flex-shrink:0;
 }
-
-    @media(max-width:900px){
-  .links{display:none}
-}
+    .brand small{
+      display:block;
+      font-weight:500;
+      color:var(--muted);
+      letter-spacing:-.1px;
+      margin-top:1px;
+      font-size:12px;
+    }
     .links{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:13px;
-  color:rgba(17,24,39,.72);
-  font-weight:600;
-  white-space:nowrap;   /* 🔒 prevents wrapping */
-  flex-shrink:0;        /* 🔒 prevents squeezing */
-}
-.links a{
-  padding:8px 10px;
-  border-radius:12px;
-  transition:.15s ease;
-  white-space:nowrap;   /* 🔒 link text never wraps */
-}
+      display:flex; align-items:center; gap:14px;
+      font-size:13px;
+      color:rgba(17,24,39,.72);
+      font-weight:550;
+    }
+    .links a{
+      padding:8px 10px;
+      border-radius:12px;
+      transition:.15s ease;
+    }
     .links a:hover{
       background:rgba(17,24,39,.045);
       color:rgba(17,24,39,.92);
@@ -412,13 +378,12 @@
   <div class="topbar">
     <div class="wrap">
       <div class="nav">
-        <a class="brand" href="/index.html">
-  <img class="logo" src="/assets/img/dsg-logo.png" alt="DSG Exterior Cleaning logo" />
-  <span class="brandtext">
-    <span class="brandname">DSG Exterior Cleaning</span>
-    <span class="tagline">Professional Care for Your Home</span>
-  </span>
-</a>
+        <div class="brand">
+          <img class="logo" src="/assets/img/dsg-logo.png" alt="DSG Exterior Cleaning logo" />
+          <div>
+            DSG Exterior Cleaning
+            <small>Professional Care for Your Home</small>
+          </div>
         </div>
 
         <div class="links" role="navigation" aria-label="Primary">
