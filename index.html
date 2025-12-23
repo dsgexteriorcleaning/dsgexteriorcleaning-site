@@ -64,26 +64,45 @@
   gap:12px;
   font-weight:650;
   letter-spacing:-.2px;
-  white-space:nowrap;   /* 🔒 keep on one line */
   min-width:0;
-  max-width:420px;
+  flex:0 1 auto;              /* allow brand to shrink if needed */
 }
-    .logo{
-  width:65px;
-  height:65px;
+
+.brandtext{
+  display:flex;
+  flex-direction:column;       /* two lines */
+  line-height:1.1;
+  min-width:0;
+}
+
+.brandname{
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:-.2px;
+  white-space:nowrap;          /* line 1 stays one line */
+  overflow:hidden;
+  text-overflow:ellipsis;      /* if extremely tight, it truncates cleanly */
+  max-width:320px;             /* prevents brand from stealing header space */
+}
+
+.tagline{
+  font-size:12px;
+  font-weight:500;
+  color:#6b7280;
+  white-space:nowrap;          /* line 2 stays one line */
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:320px;
+}
+
+.logo{
+  width:32px;
+  height:32px;
   object-fit:contain;
   display:block;
   flex-shrink:0;
 }
-    .brand small{
-  display:block;                 /* 👈 inline, not block */
-  font-weight:500;
-  color:#6b7280;
-  margin-left:6px;
-  font-size:12px;
-  white-space:nowrap; 
-  opacity:.75;/* 🔒 no wrapping */
-}
+
     @media(max-width:900px){
   .links{display:none}
 }
