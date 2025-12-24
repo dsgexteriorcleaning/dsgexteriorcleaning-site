@@ -55,7 +55,7 @@
     }
     
     .nav{
-      height:56px;                 /* fixed header height */
+      height:60px;                 /* fixed header height */
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -71,21 +71,20 @@
     }
     
     .logo{
-      width:28px;                  /* layout footprint stays small */
-      height:28px;
+      width:50px;                  /* layout footprint stays small */
+      height:50px;
       object-fit:contain;
       display:block;
       flex-shrink:0;
     
-      transform:scale(1.9);        /* 🔥 this is the real increase */
+      transform:scale(2.6);        /* 🔥 this is the real increase */
       transform-origin:left center;
     
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,.18)); /* subtle pop */
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,.20)); /* subtle pop */
     }
       @media(max-width:900px){
-        .logo{
-          transform:scale(1.6);
-              }
+        .nav{height:56px;}
+        .logo{ transform:scale(2.2); }
     }
 
 
@@ -307,8 +306,62 @@
       }
       footer .fine{font-size:13px}     /* slightly larger on mobile */
     }
+    /* Section headings (Apple-like) */
+    .eyebrow{
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:rgba(17,24,39,.55);
+      margin:0 0 10px;
+    }
+    
+    h2{
+      margin:0 0 10px;
+      font-size:40px;
+      line-height:1.12;
+      letter-spacing:-.9px;
+      font-weight:800;
+      color:var(--text);
+    }
+    
+    .sub{
+      margin:0 0 28px;
+      max-width:85ch;
+      color:rgba(17,24,39,.72);
+      font-size:16px;
+    }
+    @media(max-width:900px){
+      h2{font-size:32px}
+      .sub{font-size:15.5px}
+    }
+      /* Consistent section spacing */
+      section{ padding:84px 0; background:#fff; }
+      
+      /* Alternating subtle gray bands */
+      section:nth-of-type(even){
+        background:linear-gradient(180deg,#ffffff,#fbfbfc);
+        border-top:1px solid var(--border);
+        border-bottom:1px solid var(--border);
+      }
+      
+      /* Keep your explicit .band and .vets looking premium */
+      .band{
+        background:linear-gradient(180deg,#ffffff,#fbfbfc) !important;
+        border-top:1px solid var(--border);
+        border-bottom:1px solid var(--border);
+      }
+      
+      .vets{
+        background:
+          radial-gradient(900px 520px at 20% 25%, rgba(176,141,87,.14), transparent 60%),
+          linear-gradient(180deg,#ffffff,#fbfbfc) !important;
+        border-top:1px solid var(--border);
+        border-bottom:1px solid var(--border);
+      }
+
     /* Sections (keep your existing section styles below this if you want) */
-    section{padding:80px 0}
+   
   </style>
 </head>
 <body>
