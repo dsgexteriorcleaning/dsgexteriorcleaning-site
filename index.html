@@ -617,11 +617,23 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
   <script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
   function toggleMenu(){
     const m = document.getElementById("mobileMenu");
     if(!m) return;
     m.style.display = (m.style.display === "block") ? "none" : "block";
   }
+
+  // close menu after tapping a link (mobile UX)
+  (function(){
+    const m = document.getElementById("mobileMenu");
+    if(!m) return;
+    m.querySelectorAll("a").forEach(a=>{
+      a.addEventListener("click", ()=>{ m.style.display="none"; });
+    });
+  })();
 </script>
+
 </body>
 </html>
