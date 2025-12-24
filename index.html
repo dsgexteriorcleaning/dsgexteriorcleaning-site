@@ -263,7 +263,30 @@
       .hero-left h1{font-size:42px}
       .grid2{grid-template-columns:1fr}
     }
-
+    footer{
+      padding:44px 0;
+      background:#fbfbfc;
+      border-top:1px solid var(--border);
+      color:rgba(17,24,39,.72);
+    }
+    
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      align-items:start;
+    }
+    
+    .divider{height:1px;background:var(--border);margin:18px 0}
+    .fine{font-size:12px;color:rgba(17,24,39,.58)}
+    
+    @media(max-width:900px){
+      .footer-grid{
+        grid-template-columns:1fr;     /* collapse */
+        gap:22px;                      /* more breathing room */
+      }
+      footer .fine{font-size:13px}     /* slightly larger on mobile */
+    }
     /* Sections (keep your existing section styles below this if you want) */
     section{padding:80px 0}
   </style>
