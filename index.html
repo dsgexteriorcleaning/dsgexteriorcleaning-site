@@ -51,6 +51,7 @@
       background:rgba(255,255,255,.78);
       backdrop-filter:saturate(180%) blur(18px);
       border-bottom:1px solid var(--border);
+      overflow:visible;
     }
     
     .nav{
@@ -66,18 +67,28 @@
       align-items:center;
       gap:12px;
       min-width:0;
+      padding-top:2px;
     }
     
     .logo{
-      width:32px;                  /* layout size stays small */
-      height:32px;
+      width:28px;                  /* layout footprint stays small */
+      height:28px;
       object-fit:contain;
       display:block;
       flex-shrink:0;
     
-      transform:scale(1.35);       /* visual size increase */
+      transform:scale(1.9);        /* 🔥 this is the real increase */
       transform-origin:left center;
+    
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,.18)); /* subtle pop */
     }
+      @media(max-width:900px){
+        .logo{
+          transform:scale(1.6);
+              }
+    }
+
+
     .links{
       display:flex;
       align-items:center;
@@ -92,6 +103,8 @@
       border-radius:12px;
       transition:.15s ease;
       white-space:nowrap;
+      font-weight:550;
+      opacity:.88;
     }
     .links a:hover{
       background:rgba(17,24,39,.045);
@@ -124,6 +137,7 @@
       border-color:transparent;
       background:transparent;
       color:rgba(17,24,39,.72);
+      opacity:.75;
     }
     .btn.link:hover{background:rgba(17,24,39,.045);box-shadow:none}
 
