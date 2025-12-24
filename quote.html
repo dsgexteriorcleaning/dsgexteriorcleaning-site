@@ -23,7 +23,8 @@
     *{box-sizing:border-box}
     body{margin:0;font-family:var(--sf);background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+      @media(min-width:768px){.wrap{padding:0 22px}}
     .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.78);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--border)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
     .brand{display:flex;align-items:center;gap:12px;min-width:0;flex:0 1 auto}
