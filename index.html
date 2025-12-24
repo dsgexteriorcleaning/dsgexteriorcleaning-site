@@ -85,6 +85,11 @@
       font-size:13px;
       color:rgba(17,24,39,.72);
       font-weight:550;
+      @media(max-width:900px){
+        .links{display:none}
+        .nav{gap:10px}
+        .brandname,.tagline{max-width:210px} /* prevents brand taking over */
+      }
     }
     .links a{
       padding:8px 10px;
