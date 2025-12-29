@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Care Plans - DSG Exterior Cleaning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .page-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 20px 60px; text-align: center; }
+        .page-hero h1 { font-size: clamp(32px, 6vw, 56px); font-weight: 900; margin-bottom: 16px; }
+        .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 40px; }
+        .plan-card { background: white; padding: 40px 32px; border-radius: 16px; border: 3px solid var(--border); position: relative; }
+        .plan-card.featured { border-color: var(--accent); transform: scale(1.03); }
+        .plan-card.featured::before { content: 'BEST VALUE'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 800; }
+        .plan-name { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+        .plan-price { font-size: 48px; font-weight: 900; color: var(--accent); margin-bottom: 4px; }
+        .plan-price small { font-size: 20px; color: var(--secondary); }
+        .plan-savings { font-size: 14px; color: var(--success); font-weight: 600; margin-bottom: 24px; }
+        .plan-features { list-style: none; margin-bottom: 28px; }
+        .plan-features li { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 15px; display: flex; align-items: start; gap: 10px; }
+        .plan-features li::before { content: '✓'; color: var(--success); font-weight: 900; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-placeholder">DSG</div>
+                <div class="logo-text">DSG Exterior<span>Professional Care</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="veterans.html">Veterans</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a href="tel:+18455550123" class="phone-btn">📞 Call Now</a>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <h1>DSG Home Care Plans</h1>
+        <p>Annual maintenance subscriptions with priority scheduling and locked pricing</p>
+    </div>
+
+    <section class="section">
+        <div class="section-container">
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3 class="plan-name">Essential Home Care</h3>
+                    <div class="plan-price">$45<small>/mo</small></div>
+                    <div class="plan-savings">or $495/year (save $45)</div>
+                    <ul class="plan-features">
+                        <li>1× Annual Gutter Cleaning</li>
+                        <li>Priority scheduling</li>
+                        <li>Locked pricing (24 months)</li>
+                        <li>No service call fees</li>
+                        <li>Optional driveway add-on (+$20/mo)</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn-primary">Select Essential Plan</a>
+                </div>
+
+                <div class="plan-card featured">
+                    <h3 class="plan-name">Complete Home Care</h3>
+                    <div class="plan-price">$85<small>/mo</small></div>
+                    <div class="plan-savings">or $945/year (Dutchess pricing)</div>
+                    <ul class="plan-features">
+                        <li>1× Annual House Soft Wash (up to 3,200 sq ft)</li>
+                        <li>1× Annual Gutter Cleaning</li>
+                        <li>1× Annual Exterior Window Cleaning</li>
+                        <li>1× Annual Driveway or Walkway Cleaning</li>
+                        <li>Light mold/mildew touch-ups</li>
+                        <li>Priority scheduling</li>
+                        <li>10% discount on additional services</li>
+                        <li>Locked pricing (24 months)</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn-primary">Select Complete Plan</a>
+                    <p style="margin-top: 16px; font-size: 13px; color: var(--secondary);">Putnam: ~$94/mo | Westchester: ~$102/mo</p>
+                </div>
+
+                <div class="plan-card">
+                    <h3 class="plan-name">Estate / Premium Care</h3>
+                    <div class="plan-price">$135<small>/mo</small></div>
+                    <div class="plan-savings">or $1,495/year (Dutchess pricing)</div>
+                    <ul class="plan-features">
+                        <li>1× Annual House Soft Wash (up to 4,000 sq ft)</li>
+                        <li>2× Annual Gutter Cleanings (Spring & Fall)</li>
+                        <li>1× Annual Exterior Window Cleaning</li>
+                        <li>Full driveway + front walkway cleaning</li>
+                        <li>Annual exterior inspection & photo documentation</li>
+                        <li>Concierge scheduling (preferred time windows)</li>
+                        <li>15% discount on additional services</li>
+                        <li>Locked pricing (36 months)</li>
+                    </ul>
+                    <a href="index.html#quote" class="btn-primary">Select Estate Plan</a>
+                    <p style="margin-top: 16px; font-size: 13px; color: var(--secondary);">Putnam: ~$149/mo | Westchester: ~$162/mo</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 48px; text-align: center; padding: 32px; background: var(--light); border-radius: 16px;">
+                <h3 style="font-size: 24px; margin-bottom: 16px;">Why Choose a Home Care Plan?</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 24px; text-align: left;">
+                    <div>
+                        <h4 style="font-size: 18px; margin-bottom: 8px; color: var(--accent);">📅 Automatic Scheduling</h4>
+                        <p style="font-size: 14px; color: var(--secondary);">We contact you when it's time for your seasonal services. Never forget gutter cleaning again.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 18px; margin-bottom: 8px; color: var(--accent);">💰 Locked Pricing</h4>
+                        <p style="font-size: 14px; color: var(--secondary);">Your rate stays the same for 24-36 months. No surprise price increases.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 18px; margin-bottom: 8px; color: var(--accent);">⭐ Priority Service</h4>
+                        <p style="font-size: 14px; color: var(--secondary);">Plan members get first access to peak season scheduling before walk-in customers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="cta-content">
+            <h2>Questions About Plans?</h2>
+            <p>Call us to discuss which plan is right for your home.</p>
+            <div class="cta-buttons">
+                <a href="tel:+18455550123" class="btn-primary">Call (845) 555-0123</a>
+                <a href="index.html#quote" class="btn-secondary">Get Custom Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>DSG Exterior Cleaning</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 12px;">Professional care for your home.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul><li><a href="services.html">All Services</a></li><li><a href="plans.html">Home Care Plans</a></li></ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul><li><a href="veterans.html">Veterans Program</a></li><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li></ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul><li><a href="tel:+18455550123">(845) 555-0123</a></li><li><a href="mailto:info@dsgcleaning.com">info@dsgcleaning.com</a></li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 DSG Exterior Cleaning LLC.</p></div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

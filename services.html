@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - DSG Exterior Cleaning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-size: clamp(32px, 6vw, 56px);
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        .page-hero p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .service-detail {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .service-detail h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+        .service-detail h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 24px 0 12px;
+        }
+        .service-detail p {
+            color: var(--secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .service-detail ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        .service-detail ul li {
+            margin-bottom: 8px;
+            color: var(--secondary);
+        }
+        .pricing-table {
+            margin: 24px 0;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+        }
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+        .pricing-row > div {
+            padding: 16px;
+            font-size: 14px;
+        }
+        .pricing-row:first-child {
+            background: var(--light);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-placeholder">DSG</div>
+                <div class="logo-text">DSG Exterior<span>Professional Care</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="veterans.html">Veterans</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a href="tel:+18455550123" class="phone-btn">📞 Call Now</a>
+        </div>
+    </nav>
+
+    <div class="page-hero">
+        <h1>Professional Exterior Cleaning Services</h1>
+        <p>Premium care for every part of your property</p>
+    </div>
+
+    <section class="section">
+        <div class="section-container">
+            <div class="services-grid">
+                <div class="service-detail" id="house-wash">
+                    <h2>🏠 House Soft Wash</h2>
+                    <p>Our soft wash system uses low-pressure, high-volume water combined with professional-grade cleaning solutions to safely remove dirt, mildew, algae, and organic stains from your siding.</p>
+                    
+                    <h3>What We Clean:</h3>
+                    <ul>
+                        <li>Vinyl, fiber cement, wood, and composite siding</li>
+                        <li>Trim, soffits, and fascia</li>
+                        <li>Garage doors and shutters</li>
+                        <li>Foundation walls</li>
+                    </ul>
+
+                    <h3>Pricing (Dutchess County Base):</h3>
+                    <div class="pricing-table">
+                        <div class="pricing-row">
+                            <div>Home Size</div>
+                            <div>Dutchess</div>
+                            <div>Putnam</div>
+                            <div>Westchester</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Small (Under 1,800 sq ft)</div>
+                            <div>$349-499</div>
+                            <div>$385-549</div>
+                            <div>$420-599</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Medium (1,801-2,800 sq ft)</div>
+                            <div>$499-699</div>
+                            <div>$550-769</div>
+                            <div>$599-849</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Large (2,801-3,800 sq ft)</div>
+                            <div>$699-949</div>
+                            <div>$769-1049</div>
+                            <div>$849-1149</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>XL/Complex (3,800+ sq ft)</div>
+                            <div>$949-1399</div>
+                            <div>$1049-1549</div>
+                            <div>$1149-1699</div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#quote" class="btn-primary">Get Quote for House Washing</a>
+                </div>
+
+                <div class="service-detail" id="roof-wash">
+                    <h2>🏔️ Roof Soft Wash</h2>
+                    <p>Gentle, low-pressure roof cleaning that removes black algae streaks (gloeocapsa magma), lichen, and moss without damaging your shingles. Extends roof life by 5-7 years.</p>
+
+                    <h3>Our Process:</h3>
+                    <ul>
+                        <li>Ground-based application (no walking on roof)</li>
+                        <li>Professional soft wash chemicals</li>
+                        <li>Safe for asphalt shingles</li>
+                        <li>Landscape protection included</li>
+                        <li>Visible results in 1-2 weeks</li>
+                    </ul>
+
+                    <h3>Pricing:</h3>
+                    <div class="pricing-table">
+                        <div class="pricing-row">
+                            <div>Roof Size</div>
+                            <div>Dutchess</div>
+                            <div>Putnam</div>
+                            <div>Westchester</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Small/Simple</div>
+                            <div>$499-799</div>
+                            <div>$549-879</div>
+                            <div>$599-949</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Medium</div>
+                            <div>$799-1199</div>
+                            <div>$879-1319</div>
+                            <div>$949-1449</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Large/Steep/Complex</div>
+                            <div>$1199-1899</div>
+                            <div>$1319-2089</div>
+                            <div>$1449-2299</div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#quote" class="btn-primary">Get Quote for Roof Cleaning</a>
+                </div>
+
+                <div class="service-detail" id="gutters">
+                    <h2>💧 Gutter Cleaning</h2>
+                    <p>Complete gutter cleaning and flushing to prevent water damage, foundation issues, and ice dams. Ground-based when possible for safety.</p>
+
+                    <h3>Includes:</h3>
+                    <ul>
+                        <li>Remove all debris from gutters</li>
+                        <li>Flush downspouts for proper drainage</li>
+                        <li>Basic inspection for damage</li>
+                        <li>Haul away all debris</li>
+                        <li>Optional: Gutter brightening (exterior cleaning)</li>
+                    </ul>
+
+                    <h3>Pricing:</h3>
+                    <div class="pricing-table">
+                        <div class="pricing-row">
+                            <div>Home Type</div>
+                            <div>Dutchess</div>
+                            <div>Putnam</div>
+                            <div>Westchester</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>1-Story</div>
+                            <div>$229-349</div>
+                            <div>$249-385</div>
+                            <div>$269-425</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>2-Story</div>
+                            <div>$299-499</div>
+                            <div>$329-549</div>
+                            <div>$359-599</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Complex/Guards</div>
+                            <div>$499-799</div>
+                            <div>$549-879</div>
+                            <div>$599-949</div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#quote" class="btn-primary">Get Quote for Gutter Cleaning</a>
+                </div>
+
+                <div class="service-detail" id="windows">
+                    <h2>✨ Window Cleaning (Exterior)</h2>
+                    <p>Crystal-clear exterior windows using water-fed pole technology. Reaches second-story windows safely from the ground. Spot-free drying with purified water.</p>
+
+                    <h3>Our Method:</h3>
+                    <ul>
+                        <li>Water-fed pole system (up to 40 feet)</li>
+                        <li>Purified water for streak-free results</li>
+                        <li>No ladders required (safer)</li>
+                        <li>Screens cleaned in place</li>
+                        <li>Interior windows available (+60-100%)</li>
+                    </ul>
+
+                    <h3>Pricing:</h3>
+                    <div class="pricing-table">
+                        <div class="pricing-row">
+                            <div>Window Count</div>
+                            <div>Dutchess</div>
+                            <div>Putnam</div>
+                            <div>Westchester</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Small (Under 20)</div>
+                            <div>$199-349</div>
+                            <div>$219-385</div>
+                            <div>$239-425</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Medium (20-35)</div>
+                            <div>$349-599</div>
+                            <div>$385-659</div>
+                            <div>$425-719</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Large (35-60)</div>
+                            <div>$599-999</div>
+                            <div>$659-1099</div>
+                            <div>$719-1199</div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#quote" class="btn-primary">Get Quote for Window Cleaning</a>
+                </div>
+
+                <div class="service-detail" id="flatwork">
+                    <h2>🚗 Concrete / Flatwork Cleaning</h2>
+                    <p>High-pressure cleaning for driveways, walkways, patios, and decks. Removes oil stains, tire marks, mold, and years of built-up grime.</p>
+
+                    <h3>We Clean:</h3>
+                    <ul>
+                        <li>Driveways (concrete, asphalt, pavers)</li>
+                        <li>Walkways and sidewalks</li>
+                        <li>Patios and pool decks</li>
+                        <li>Garage floors</li>
+                        <li>Outdoor steps and stairs</li>
+                    </ul>
+
+                    <h3>Pricing:</h3>
+                    <div class="pricing-table">
+                        <div class="pricing-row">
+                            <div>Service</div>
+                            <div>Dutchess</div>
+                            <div>Putnam</div>
+                            <div>Westchester</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Minimum Service</div>
+                            <div>$249</div>
+                            <div>$275</div>
+                            <div>$299</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Standard Driveway</div>
+                            <div>$399-699</div>
+                            <div>$439-769</div>
+                            <div>$479-849</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div>Large/Multiple Areas</div>
+                            <div>$699-1199</div>
+                            <div>$769-1319</div>
+                            <div>$849-1449</div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#quote" class="btn-primary">Get Quote for Flatwork Cleaning</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="cta-content">
+            <h2>Ready to Get Started?</h2>
+            <p>Professional equipment. Trained technicians. Guaranteed results.</p>
+            <div class="cta-buttons">
+                <a href="index.html#quote" class="btn-primary">Get Instant Quote</a>
+                <a href="tel:+18455550123" class="btn-secondary">Call (845) 555-0123</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>DSG Exterior Cleaning</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 12px;">
+                    Professional care for your home. Serving Westchester, Putnam, and Dutchess Counties.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html#house-wash">House Washing</a></li>
+                    <li><a href="services.html#roof-wash">Roof Cleaning</a></li>
+                    <li><a href="services.html#gutters">Gutter Cleaning</a></li>
+                    <li><a href="services.html#windows">Window Cleaning</a></li>
+                    <li><a href="services.html#flatwork">Concrete / Flatwork</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="index.html#quote">Get Quote</a></li>
+                    <li><a href="plans.html">Home Care Plans</a></li>
+                    <li><a href="veterans.html">Veterans Program</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="tel:+18455550123">(845) 555-0123</a></li>
+                    <li><a href="mailto:info@dsgcleaning.com">info@dsgcleaning.com</a></li>
+                    <li style="color: rgba(255,255,255,0.7); font-size: 14px;">Hopewell Junction, NY 12533</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DSG Exterior Cleaning LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
